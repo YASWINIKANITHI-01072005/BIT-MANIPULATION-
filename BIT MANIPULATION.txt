@@ -1,0 +1,151 @@
+BIT MANIPULATION
+
+*Incrementing any value without using + symbol
+-(~10)=-(-11)
+=11
+
+*class main{
+    public static void main(String[] args){
+        int a=10;
+        int b=12;
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println(a);
+        System.out.println(b);
+        }
+}
+
+
+
+
+*public class BitManipulation
+{
+public static void main(String[] args)
+{
+if((10^20)<0)
+{
+System.out.println("Oposite");
+}
+System.out.println("else");
+}
+}
+
+*public class BitManipulation
+{
+    public static void main(String[] args) {
+
+        int n =8;
+
+        if((n&(n-1))==0)
+
+        System.out.println("Power of 2");
+
+
+        else
+
+        System.out.println("not a power of 2");
+    }
+}
+*
+
+
+*\\\\\\\\\EVEN OR ODD USING BITWISE\\\\\\\\\\\\\\\\\\\\
+
+n&1==0
+odd
+\\\\\\\\\\\\\\FINDING SET BIT OR UNSET BIT\\\\\\\\\\\\\
+public class BitManipulation
+{
+    public static void main(String[] args) 
+{
+int n=9;
+int k=4;
+int res =n&(1<<k);
+if(res==0)
+System.out.println("unset bit");
+else
+System.out.println("set bit");
+}
+}
+\\\\\\\\\\\\\\\\\SET\\\\\\\\\\\\\\\\\\\
+
+public class BitManipulation
+{
+    public static void main(String[] args) 
+    {
+        int n=9;
+        int k=2;
+        int res = n |(1<<k);
+        System.out.println(res);
+    }
+}
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\CLEAR BIT\\\\\\\\\\\\\
+public class BitManipulation
+{
+    public static void main(String[] args) 
+    {
+        int n=9;
+        int k=3;
+        int res = n& ~(1<<k);
+        System.out.println(res);
+    }
+}
+
+class Solution {
+    public int hammingWeight(int n) 
+	{
+		int count=0;
+		while(n<0)
+		{
+			n=n&(n-1);
+			count++;
+		}
+		return true;
+	}
+	public static void main(String[] args)
+	{
+		int n=12;
+		System.out.println(hammingweight(n));
+	}
+}
+\\\\\\\\\\\\\\MISSING number\\\\\\\\\\\\
+
+class Solution 
+{
+	public int missingNumber(int[] nums) 
+	{
+		int n=nums.length;
+		int xor=0;
+		int xor1=0;
+		for(int i=0;i<n;i++)
+		xor=xor^(nums[i]);
+		for(int i=0;i<=n;i++)
+		xor1=xor1^i;
+		return xor=xor^i;
+	}
+	public static void main(String[] args)
+	{
+		int nums[]={6,5,4,3,0,2};
+		System.out.println(missingNumber(nums));
+	}
+}
+        
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
